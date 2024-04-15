@@ -70,18 +70,19 @@ recursos = [
 
 
 // Proceso
-// 1. Verificar si el usuario existe
 async function ProcesoVerificacion (usuario_func, recurso_func, callback) {
 
 console.log('--------------------------------------------------------');
 console.log('Iniciando verificación para el usuario: '+ usuario_func);
 console.log('--');
 
+// 1. Verificar si el usuario existe
     UsuarioExiste(usuario_func, (existe) => {
         if (existe == true) {
             console.log('Usuario verificado exitosamente.');
             console.log('--');
 
+// 2. Verificar si la cuenta del usuario está activa
             CuentaActiva (usuario_func, (activo) => {
                 if (activo == true) {
                     console.log('La cuenta del usuario está activa.');
@@ -89,6 +90,7 @@ console.log('--');
                     console.log('Iniciando verificación para el recurso: '+ recurso_func);
                     console.log('--');
 
+// 3. Verificar permisos
                     VerificarPermisos (usuario_func, recurso_func, (permiso) => {
                         if (permiso == true){
                             console.log('El usuario tiene acceso al recurso.');
@@ -111,19 +113,6 @@ console.log('--');
     })
 
 }
-
-/*
- ProcesoVerificacion('sadelgado', 'reportes.pdf', (respuesta) => {
-    ProcesoVerificacion('heladio', 'confidencial.txt', (respuesta) => {
-        ProcesoVerificacion('slopez', 'reportes.pdf', (respuesta) => {
-            ProcesoVerificacion('pedro', 'reportes.pdf', (respuesta) => {
-                ProcesoVerificacion('sadelgado', 'confidencial.txt', (respuesta) => {
-                })
-            })
-        })
-        
-    })
- });*/
 
  async function ejecutarProcesos() {
     await new Promise((resolve) => {
@@ -148,6 +137,7 @@ console.log('--');
 }
 
 ejecutarProcesos();
+
 /*
 repl.start ({
     prompt: '(ejercicio)>'
