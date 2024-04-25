@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             } else {
 
                 console.log('Contraseña incorrecta');
+
+                resultado_container.innerHTML = `
+                <p>Contraseña incorrecta</p>`
             }
         } else {
             console.log('Usuario no encontrado');
