@@ -23,9 +23,9 @@ function resuloperacion() {
     const estilo = window.getComputedStyle(resultado_operacion);
 
     if (estilo.display === 'none') {
-        seccion_desposito.style.display = 'block';
+        resultado_operacion.style.display = 'block';
     } else {
-        seccion_desposito.style.display = 'none';
+        resultado_operacion.style.display = 'none';
     }
 }
 
@@ -37,12 +37,12 @@ function realizadeposito() {
 
         cuenta.saldo = ((Number(cuenta.saldo)) + Number(deposito));
 
+        depositar();
+
+        resuloperacion();
+
         depositado.value = Number(deposito);
         saldo_actual.value = Number(cuenta.saldo);
-
-        depositar()
-
-        resuloperacion()
 
         console.log("Saldo modificado con éxito.");
         console.log('Valor depositado: ' + deposito);
