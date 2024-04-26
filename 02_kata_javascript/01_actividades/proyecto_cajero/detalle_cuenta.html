@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero ATM - Detalle Cuenta</title>
+
+    <!-- El atributo defer indica que el script se carge luego de la pagina-->
+    <script defer src="js/cajero.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Banco MexiCol</h1>
+        <img style="height: 100px;" src="https://marcas-logos.net/wp-content/uploads/2022/06/Banco-do-Brasil-logo.png" alt="MexiCol">
+    </header>
+    
+    <Main class="container">
+        <section>
+            <h2>Bienvenido a tu cuenta</h2>
+            <p id="user_name"> </p>
+        </section>
+        <section>
+            <h2>Operaciones</h2>
+            <div id="botones-atm">
+              <button id="boton-saldo">Consulta tu Saldo</button>
+              <button id="boton-depositar" onclick="depositar()">Depositar Saldo</button>
+              <button id="boton-retirar">Retirar Saldo</button>
+            </div>
+        </section>
+        <section id='seccion_desposito' style="display: none">
+            <h3>Depositar</h3>
+                <div>
+                    <label for="deposito" class="labelform">Monto</label>
+                    <input type="number" id="deposito" placeholder="Ingresa el monto" required>
+                    <button id="boton-depositar" onclick="realizadeposito()">Depositar</button>
+                </div>
+        </section>
+        <section id='resultado_operacion' style="display: none">
+            <h3>Resultado Operacion</h3>
+                <div><p>¡Operacion Exitosa!</p></div>
+                <div>
+                    <label for="depositado" class="labelform">Valor Depositado</label>
+                    <input type="number" id="depositado">
+                    <label for="saldo_actual" class="labelform">Saldo Actual</label>
+                    <input type="number" id="saldo_actual">
+                </div>
+        </section>
+        <section>
+            <div id="resultado_container"></div>
+        </section>
+    </Main>
+
+
+</body>
+</html>

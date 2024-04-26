@@ -35,12 +35,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const passwordinput = document.getElementById('password').value;
             const reguser = usuarios.find(usuario => usuario.user === username.toLowerCase().trim());
 
-            if (usuarios.find(usuario => usuario.user === username && usuario.password === passwordinput.trim())) {
+            if (usuarios.find(usuario => usuario.user === username.toLowerCase().trim() && usuario.password === passwordinput.trim())) {
 
                 console.log('Inicio de sesión exitoso\nBienvenido ' + reguser.nombre);
 
                 resultado_container.innerHTML = `
                 <p>Bienvenido ${reguser.nombre}</p>`
+
+                // Limpia el formulario
+                login_form.reset()
+
+                // Carga la informacion de la cuenta
+                let cuenta = JSON.stringify(cuentas.find(cuenta => cuenta.userid === reguser.id))
+                localStorage.setItem('cuenta', cuenta)
+
+                // Carga la informacion del usuario
+                let cuenta_usuario = JSON.stringify(reguser)
+                localStorage.setItem('user', cuenta_usuario)
+
+                // Carga el detalle de la cuenta
+                setTimeout(() => window.location.href = 'detalle_cuenta.html', 1000)
 
             } else {
 
