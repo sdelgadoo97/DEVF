@@ -1,0 +1,10 @@
+.data_container {
+    border : 1px solid grey;
+    background-color: black;
+    color: white;
+
+}
+
+.list_hobbies {
+    list-style: none;
+}
