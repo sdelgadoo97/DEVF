@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "1a18a54d-9dc1-4bd4-9f4c-45ed1f8742c1",
+		"name": "Dev_Protalento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34384954"
+	},
+	"item": [
+		{
+			"name": "/api/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9714/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/suma/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9714/api/suma?num1=15&num2=85",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"suma"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "15"
+						},
+						{
+							"key": "num2",
+							"value": "85"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/usuario/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9714/api/usuario/sergiodelgado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"usuario",
+						"sergiodelgado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/swapi/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9714/api/swapi/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"swapi",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/body/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nombre\": \"Maui\", \"ocupacion\": \"Sensei\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9714/api/body/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"body",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/suma/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"num1\": \"30\"\r\n    ,\"num2\": \"130\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9714/api/suma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"suma"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/delete/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9714/api/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9714",
+					"path": [
+						"api",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
