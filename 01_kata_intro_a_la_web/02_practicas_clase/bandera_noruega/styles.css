@@ -1,0 +1,51 @@
+html, body {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bandera {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.seccionbandera {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    width: 12%;
+    height: 100%;
+    background-color: blue;
+}
+
+.red.primero {
+    width: 20%;
+    height: 100%;
+
+}
+
+.red.segundo {
+    width: 75%;
+    height: 100%;
+}
+
+.white {
+    width: 4%;
+    height: 100%;
+    background-color: white;
+}
+
