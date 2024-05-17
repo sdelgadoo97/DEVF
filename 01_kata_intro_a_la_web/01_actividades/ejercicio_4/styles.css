@@ -1,0 +1,114 @@
+html,
+body {
+    margin : 0;
+    padding : 0;   
+    font-family:monospace; 
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.principal {
+    padding : 20px;
+    width: 80%;
+}
+
+.lateral {
+    padding: 20px;
+    width: 20%;
+    background-color: #e0e0e0;
+    border-radius: 13px;
+}
+
+header{
+    padding : 10px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    background-image: url("./sources/images/cover.jpg"); 
+    background-size: cover;
+    color : white;
+    text-shadow: 1px 1px 1px white;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+}
+header p {
+    color: rgb(229, 255, 0);
+    text-shadow: 1px 1px 1px rgb(229, 255, 0);
+    font-size: 20px;
+}
+
+header h1 {
+    color: white;
+    text-shadow: 1px 1px 1px rgb(229, 255, 0);
+    font-size: 35px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color : rgb(229, 255, 0);
+    text-decoration: none;
+}
+.nav {
+        background-color: #494949;
+
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+.nav > * {
+    margin : 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.image-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-left: 10px;
+    padding-left: 50px;
+}
+
+.image-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-left: 10px;
+    padding-left: 50px;
+}
+
+.listExperiencia {
+    line-height: 1;
+    margin : 30px;
+}
+
+.listExperiencia > * {
+    margin : 5px;
+}
+
+.datoscontacto > * {
+    margin: 0;
+}
+
+h2 {
+    color: #7a05ff;
+    margin-bottom: 5px;
+}
+
+h3 {
+    color:#3157ff;
+}
